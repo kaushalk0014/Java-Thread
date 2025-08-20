@@ -59,4 +59,10 @@ public class Employee {
 		this.basicSalary = basicSalary;
 	}
 
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", name=" + name + ", salary=" + salary + ", noOfWorkingDays=" + noOfWorkingDays
+				+ ", basicSalary=" + basicSalary + "]";
+	}
+
 }
