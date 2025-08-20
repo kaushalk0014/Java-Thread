@@ -1,0 +1,7 @@
+# Ignore build output
+target/
+
+# Ignore IDE settings
+*.iml
+.idea/
+.vscode/
