@@ -28,6 +28,6 @@ public class ExecutorsMainTest {
 		}
 		
 		executorService.shutdown(); // Shutdown the executor service to stop accepting new tasks
-		//https://www.youtube.com/watch?v=FdC-CBpK-O4
+		
 	}
 }
