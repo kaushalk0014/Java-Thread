@@ -24,6 +24,6 @@ public class ThreadInterrupt extends Thread {
 			e.printStackTrace();
 		}
 
-		System.out.println("Thread state : " + thread.getState());
+		System.out.println("Thread state name : " + thread.getState());
 	}
 }
