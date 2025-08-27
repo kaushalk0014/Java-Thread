@@ -13,11 +13,11 @@ public class ThreadLockBackAccount {
 	public void withdraw(int amount) {
 		System.out.println("Attempting to withdraw " + amount + "   Thread Name: " + Thread.currentThread().getName());
 		try {
-			if (lock.tryLock(100000, TimeUnit.MILLISECONDS)) {
+			if (lock.tryLock(100, TimeUnit.MILLISECONDS)) {
 				if (balance >= amount) {
 					System.out.println("Processing for withdrawal " + Thread.currentThread().getName());
 					try {
-						Thread.sleep(3000);
+						Thread.sleep(3000);//It may take time to process the transaction for example 3 sec
 						balance = balance - amount;
 						System.out.println("Completed withdrowal Remaing balance : " + balance);
 					} catch (InterruptedException e) {
