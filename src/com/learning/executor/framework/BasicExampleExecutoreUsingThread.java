@@ -23,7 +23,7 @@ public class BasicExampleExecutoreUsingThread {
 			try {
 				threads[j-1].join();
 			} catch (InterruptedException e) {
-				Thread.currentThread().interrupted();
+				Thread.currentThread().interrupt();
 			}
 		}
 		
@@ -36,6 +36,7 @@ public class BasicExampleExecutoreUsingThread {
 			Thread.sleep(1000);
 		} catch (Exception e) {
 			e.printStackTrace();
+			Thread.currentThread().interrupt();
 		}
 		long result = 1;
 		for (int i = 1; i <= number; i++) {

@@ -11,3 +11,23 @@
 		 * the Lock class from java.util.concurrent.locks package
 		 * we explicitly say when to lock and unlock, giving us more control
 		 * ov
+		 
+==================================================================================================
+//ExecutorService executorService= Executors.newFixedThreadPool(2);
+Future<?> future = executorService.submit(()->s.o.pl("Message"));
+
+		These three overloaded method there in ExecutorService Interface	
+
+//Future<?> submit(Runnable task);
+	/*
+		If we want to no return value then we can use submit with runnable to impl
+	**/
+//<T> Future<T> submit(Callable<T> task);
+	/*
+		When we want to return value after performing some task then we can use submit with callable impl
+	**/
+//<T> Future<T> submit(Runnable task, T result);
+
+/*
+	If we want to return some value the we can use third submit method
+**/
